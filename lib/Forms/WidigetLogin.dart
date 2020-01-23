@@ -28,7 +28,7 @@ class _WidigetLoginState extends State<WidigetLogin> {
                 fontStyle: FontStyle.italic,
               ),
               decoration: InputDecoration(
-                labelText: 'Rogerio gato',
+                labelText: 'Rogerio Balde',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24.0)
                 )
