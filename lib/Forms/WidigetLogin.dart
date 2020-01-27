@@ -4,6 +4,9 @@ class WidigetLogin extends StatefulWidget {
   _WidigetLoginState createState() => _WidigetLoginState();
 }
 class _WidigetLoginState extends State<WidigetLogin> {
+
+  bool _lembrar;
+  void _lembrarChanged(bool value) => setState(() => _lembrar = value ?? false);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,12 +57,29 @@ class _WidigetLoginState extends State<WidigetLogin> {
               ),
               keyboardType: TextInputType.number,
             ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  
+                  Checkbox(
+                    onChanged: _lembrarChanged,
+                    value: _lembrar ?? false),
+                    Text('lembrar usuario',
+                    style: TextStyle(
+                      color: Colors.blueAccent
+                    ),
+                    ),
+                    
+                ],
+
+              ),
             SizedBox(
               height: 30,
             ),
-//uhhuguhyuhhguy
+
             ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 80,maxWidth:180),
+              constraints: BoxConstraints(maxHeight: 80,maxWidth:150),
               child: FlatButton(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                 splashColor: Colors.blueGrey,
